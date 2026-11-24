@@ -1,0 +1,54 @@
+/* The landing page fills the browser; app screens keep their mobile layout. */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #f3fbff;
+}
+.mobile-shell,
+.landing-shell {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  box-sizing: border-box;
+}
+.mobile-shell {
+  max-width: 520px;
+}
+.landing-shell {
+  max-width: none;
+}
+.mobile-shell > div,
+.landing-shell > div {
+  min-height: 0;
+}
+button:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible {
+  outline: 3px solid #0878c2;
+  outline-offset: 4px;
+}
+.offline-banner {
+  position: absolute;
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 10px 20px;
+  background: #fff1ce;
+  color: #101d27;
+  text-align: center;
+  font:
+    12px/1.5 "Aeonik-Regular",
+    sans-serif;
+}

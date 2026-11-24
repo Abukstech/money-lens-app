@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Money Lens",
+    "slug": "money-lens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.moneylens.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/splash-mark.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "app.moneylens.mobile",
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "web": {
+      "favicon": "./assets/icon.png",
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/splash-mark.png",
+          "imageWidth": 160
+        }
+      ],
+      "expo-secure-store",
+      "expo-font",
+      "expo-asset",
+      "expo-router"
+    ],
+    "scheme": "moneylens",
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "4f9d24f7-ebc9-4dd6-a0c5-125ba69867be"
+      }
+    }
+  }
+}
